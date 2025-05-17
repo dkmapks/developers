@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Generator Paragonów</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="manifest" href="manifest.json"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paragon Gucci</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <h1>Generator Paragonów</h1>
+  <div class="container">
+    <h1>Generator Paragonu</h1>
 
-  <input type="text" id="search" placeholder="Wyszukaj firmę..." oninput="searchCompany()"/>
-  <ul id="suggestions"></ul>
+    <label>Firma:</label>
+    <input type="text" id="storeName" placeholder="Np. GUCCI" value="GUCCI">
 
-  <div id="form">
-    <input type="text" id="productName" placeholder="Nazwa produktu"/>
-    <input type="number" id="productPrice" placeholder="Cena (zł)"/>
+    <label>Adres firmy:</label>
+    <input type="text" id="storeAddress" placeholder="Np. Rodeo Drive 1, LA">
+
+    <label>NIP:</label>
+    <input type="text" id="nip" placeholder="Np. 1234567890">
+
+    <hr>
+
+    <label>Produkt:</label>
+    <input type="text" id="productName" placeholder="Nazwa produktu">
+    <input type="number" id="productPrice" placeholder="Cena (zł)">
     <button onclick="addItem()">Dodaj produkt</button>
 
-    <h3>Lista produktów:</h3>
     <ul id="productList"></ul>
 
     <button onclick="generateReceipt()">Wygeneruj paragon</button>
-  </div>
 
-  <pre id="receipt"></pre>
+    <div id="receipt"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
