@@ -1,41 +1,45 @@
 body {
+  background-color: #111;
+  color: white;
   font-family: monospace;
   padding: 20px;
-  background-color: #f4f4f4;
+  margin: 0;
 }
 
-h1 {
-  color: #222;
+.container {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 input, button {
-  display: block;
-  margin: 10px 0;
+  width: 100%;
+  margin: 5px 0;
   padding: 8px;
   font-size: 16px;
 }
 
-#suggestions {
-  list-style: none;
-  padding-left: 0;
-}
-
-#suggestions li {
+button {
+  background-color: #222;
+  color: white;
+  border: 1px solid #555;
   cursor: pointer;
-  padding: 4px;
-  background: #ddd;
-  margin-bottom: 2px;
 }
 
-#productList {
-  list-style: none;
-  padding-left: 0;
+button:hover {
+  background-color: #333;
 }
 
 #receipt {
   background: white;
-  padding: 15px;
+  color: black;
+  padding: 20px;
   margin-top: 20px;
-  border: 1px solid #ccc;
+  font-family: 'Courier New', Courier, monospace;
   white-space: pre-wrap;
+  box-shadow: 0 0 15px #000;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
