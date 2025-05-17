@@ -1,1 +1,41 @@
+body {
+  font-family: monospace;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
 
+h1 {
+  color: #222;
+}
+
+input, button {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  font-size: 16px;
+}
+
+#suggestions {
+  list-style: none;
+  padding-left: 0;
+}
+
+#suggestions li {
+  cursor: pointer;
+  padding: 4px;
+  background: #ddd;
+  margin-bottom: 2px;
+}
+
+#productList {
+  list-style: none;
+  padding-left: 0;
+}
+
+#receipt {
+  background: white;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  white-space: pre-wrap;
+}
