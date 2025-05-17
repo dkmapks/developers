@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tinder</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generator Paragonów</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="manifest.json"/>
 </head>
 <body>
-    <h1>Co myślałeś że tinder cwelu</h1>
+  <h1>Generator Paragonów</h1>
+
+  <input type="text" id="search" placeholder="Wyszukaj firmę..." oninput="searchCompany()"/>
+  <ul id="suggestions"></ul>
+
+  <div id="form">
+    <input type="text" id="productName" placeholder="Nazwa produktu"/>
+    <input type="number" id="productPrice" placeholder="Cena (zł)"/>
+    <button onclick="addItem()">Dodaj produkt</button>
+
+    <h3>Lista produktów:</h3>
+    <ul id="productList"></ul>
+
+    <button onclick="generateReceipt()">Wygeneruj paragon</button>
+  </div>
+
+  <pre id="receipt"></pre>
+
+  <script src="script.js"></script>
 </body>
 </html>
