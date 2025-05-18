@@ -2,38 +2,33 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Paragon Gucci</title>
+  <title>Panel Admina – Logowanie</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
 </head>
 <body>
-  <div class="container">
-    <h1>Generator Paragonu</h1>
-
-    <label>Firma:</label>
-    <input type="text" id="storeName" placeholder="Np. GUCCI" value="GUCCI">
-
-    <label>Adres firmy:</label>
-    <input type="text" id="storeAddress" placeholder="Np. Rodeo Drive 1, LA">
-
-    <label>NIP:</label>
-    <input type="text" id="nip" placeholder="Np. 1234567890">
-
-    <hr>
-
-    <label>Produkt:</label>
-    <input type="text" id="productName" placeholder="Nazwa produktu">
-    <input type="number" id="productPrice" placeholder="Cena (zł)">
-    <button onclick="addItem()">Dodaj produkt</button>
-
-    <ul id="productList"></ul>
-
-    <button onclick="generateReceipt()">Wygeneruj paragon</button>
-
-    <div id="receipt"></div>
+  <div class="login-container">
+    <h2>Panel Klienta A01</h2>
+    <form id="loginForm">
+      <input type="text" placeholder="Nazwa użytkownika" id="username" required>
+      <input type="password" placeholder="Hasło" id="password" required>
+      <button type="submit">Zaloguj się</button>
+    </form>
+    <div id="error" class="error"></div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      if (username === "sexamap" && password === "ddddd008") {
+        window.location.href = "dashboard.html";
+      } else {
+        document.getElementById("error").textContent = "Nieprawidłowe dane logowania.";
+      }
+    });
+  </script>
 </body>
 </html>
