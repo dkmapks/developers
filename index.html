@@ -1,34 +1,16 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Panel Admina – Logowanie</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#000000">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dla Ciebie, Nikola 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="login-container">
-    <h2>Panel Klienta A01</h2>
-    <form id="loginForm">
-      <input type="text" placeholder="Nazwa użytkownika" id="username" required>
-      <input type="password" placeholder="Hasło" id="password" required>
-      <button type="submit">Zaloguj się</button>
-    </form>
-    <div id="error" class="error"></div>
+  <div class="container">
+    <h1>💌 Nikola, jesteś wyjątkowa 💌</h1>
+    <div id="message" class="message-box"></div>
   </div>
-
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      if (username === "sexamap" && password === "ddddd008") {
-        window.location.href = "dashboard.html";
-      } else {
-        document.getElementById("error").textContent = "Nieprawidłowe dane logowania.";
-      }
-    });
-  </script>
 </body>
 </html>
